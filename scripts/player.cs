@@ -64,4 +64,36 @@ public class player : KinematicBody2D
 		}
 		
 	}
+
+	private void _on_Door_body_entered(Area2D body)
+	{
+		StaticBody2D door = (StaticBody2D)GetParent().GetNode("StaticBody2D");
+		if (body.Name.Contains("player") || body.Name.Contains("Bullet"))
+		{
+			if (door.RotationDegrees == 0)
+			{
+				door.Rotate(90);
+			}
+			else
+			{
+				door.RotationDegrees = 0;
+			}
+		}
+	}
+
+	private void _on_Door1_body_entered(Area2D body)
+	{
+		StaticBody2D door1 = (StaticBody2D)GetParent().GetNode("StaticBody2D2");
+		if (body.Name.Contains("player") || body.Name.Contains("Bullet"))
+		{
+			if (door1.RotationDegrees == 0)
+			{
+				door1.Rotate(90);
+			}
+			else
+			{
+				door1.RotationDegrees = 0;
+			}
+		}
+	}
 }
