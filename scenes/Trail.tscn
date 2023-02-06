@@ -8,4 +8,5 @@ _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 [node name="Trail" type="Line2D"]
 show_behind_parent = true
 width_curve = SubResource( 1 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
 script = ExtResource( 1 )

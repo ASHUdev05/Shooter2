@@ -4,7 +4,7 @@ using System;
 public class player : KinematicBody2D
 {
 	public int Movespeed = 500;
-	public int BulletSpeed = 2000;
+	public int BulletSpeed = 1000;
 	private PackedScene _Bullet = GD.Load<PackedScene>("res://scenes/Bullet.tscn");
 
 	public override void _Ready()
